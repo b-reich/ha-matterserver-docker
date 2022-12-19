@@ -1,10 +1,8 @@
 version: "3.7"
 
 services:
-  docs:
-    build:
-      context: .
-      dockerfile: Dockerfile
+  matterbridge:
+    image: ghcr.io/b-reich/ha-matterserver-docker:latest
     ports:
       - 5580:5580
     volumes:
