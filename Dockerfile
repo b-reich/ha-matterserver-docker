@@ -26,7 +26,7 @@ RUN \
     libcairo2 \
     gdb \
     git \
-    && git clone --depth 1 -b v1.0-branch \
+    && git clone --depth 1 -b master \
     https://github.com/project-chip/connectedhomeip \
     && cp -r connectedhomeip/credentials /root/credentials \
     && rm -rf connectedhomeip \
@@ -35,15 +35,11 @@ RUN \
     && rm -rf /var/lib/apt/lists/* \
     && rm -rf /usr/src/*
 
-
 WORKDIR /data
 
-RUN \
-    pip3 install \
-    home-assistant-chip-clusters==${HOME_ASSISTANT_CHIP_VERSION} \
-    home-assistant-chip-core==${HOME_ASSISTANT_CHIP_VERSION} \
-    && pip3 install --no-cache-dir python-matter-server=="${MATTER_SERVER_VERSION}"
+RUN pip3 install --no-cache-dir python-matter-server[server]=="${MATTER_SERVER_VERSION}"
 
 CMD [ "python3", "-m", "matter_server.server", "--storage-path", "/data" ]
 
+VOLUME ["/data"]
 EXPOSE  5580
