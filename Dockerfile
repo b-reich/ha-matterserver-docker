@@ -1,8 +1,8 @@
 FROM docker.io/library/debian:stable-slim
 
 ENV DEBIAN_FRONTEND noninteractive
-ENV MATTER_SERVER_VERSION 2.0.2
-ENV HOME_ASSISTANT_CHIP_VERSION 2022.12.0
+ENV MATTER_SERVER_VERSION 2.1.0
+ENV HOME_ASSISTANT_CHIP_VERSION 2023.2.0
 
 # RUN apt-get update && apt-get install -y ibgirepository1.0-dev gcc libcairo2-dev pkg-config python3-dev gir1.2-gtk-3.0
 # RUN apk add --no-cache \
