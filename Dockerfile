@@ -1,6 +1,6 @@
 FROM docker.io/library/debian:stable-slim as build
 
-ENV DEBIAN_FRONTEND noninteractive
+ENV DEBIAN_FRONTEND=noninteractive
 
 # RUN apt-get update && apt-get install -y ibgirepository1.0-dev gcc libcairo2-dev pkg-config python3-dev gir1.2-gtk-3.0
 # RUN apk add --no-cache \
