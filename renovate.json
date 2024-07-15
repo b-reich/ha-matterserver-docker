@@ -2,5 +2,18 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
     "config:recommended"
+  ],
+  "customManagers": [
+    {
+      "customType": "regex",
+      "fileMatch": [
+        "^Dockerfile$"
+      ],
+      "matchStrings": [
+        "ENV MATTER_SERVER_VERSION=(?<currentValue>.*?)\\n"
+      ],
+      "depNameTemplate": "python",
+      "datasourceTemplate": "pip"
+    }
   ]
 }
