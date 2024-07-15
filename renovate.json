@@ -12,7 +12,7 @@
       "matchStrings": [
         "ENV MATTER_SERVER_VERSION=(?<currentValue>.*?)\n"
       ],
-      "depNameTemplate": "python-matter-server[server]",
+      "depNameTemplate": "python-matter-server",
       "datasourceTemplate": "pypi"
     }
   ]
