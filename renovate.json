@@ -10,7 +10,7 @@
         "^Dockerfile$"
       ],
       "matchStrings": [
-        "ENV MATTER_SERVER_VERSION=(?<currentValue>.*?)\\n"
+        "ENV MATTER_SERVER_VERSION=(?<currentValue>.*?)\n"
       ],
       "depNameTemplate": "python-matter-server[server]",
       "datasourceTemplate": "pip"
