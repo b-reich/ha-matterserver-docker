@@ -33,7 +33,7 @@ WORKDIR /data
 FROM docker.io/library/python
 COPY --from=build connectedhomeip/credentials /root/credentials
 
-ENV MATTER_SERVER_VERSION=3.5.0
+ENV MATTER_SERVER_VERSION=3.7.0
 
 RUN pip3 install --no-cache-dir python-matter-server[server]=="${MATTER_SERVER_VERSION}"
 
