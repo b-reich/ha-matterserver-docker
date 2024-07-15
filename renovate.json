@@ -13,7 +13,7 @@
         "ENV MATTER_SERVER_VERSION=(?<currentValue>.*?)\n"
       ],
       "depNameTemplate": "python-matter-server[server]",
-      "datasourceTemplate": "pip"
+      "datasourceTemplate": "pypi"
     }
   ]
 }
