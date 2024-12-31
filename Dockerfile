@@ -10,7 +10,7 @@ RUN curl https://sh.rustup.rs -sSf | bash -s -- -y
 
 ENV PATH="/root/.cargo/bin:${PATH}"
 
-ENV MATTER_SERVER_VERSION=6.6.1
+ENV MATTER_SERVER_VERSION=7.0.1
 
 RUN pip3 install --no-cache-dir python-matter-server[server]=="${MATTER_SERVER_VERSION}"
 
